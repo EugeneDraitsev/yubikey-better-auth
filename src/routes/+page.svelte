@@ -49,6 +49,7 @@
         error = result.error.message || 'Failed to authenticate with passkey';
       } else {
         ($session as any).refetch();
+        passkeys.get().refetch();
       }
     } catch (err: any) {
       error = err.message || 'Failed to authenticate with passkey';
