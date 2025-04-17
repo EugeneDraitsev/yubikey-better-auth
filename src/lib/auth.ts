@@ -14,7 +14,7 @@ const dbClient = createClient({
 const db = new LibsqlDialect({ client: dbClient });
 
 export const auth = betterAuth({
-  baseURL: env.BETTER_BASE_URL,
+  // baseURL: env.BETTER_BASE_URL,
   secret: env.BETTER_AUTH_SECRET,
   trustedOrigins: [env.BETTER_BASE_URL],
   database: db as any,
